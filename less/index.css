@@ -1,0 +1,262 @@
+/* 在首页的index.less去导入公共样式文件 */
+/* 定义全局变量 */
+/* 公共的样式放到base.less里面 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 防止边框padding超出页面宽度出现滚动条 */
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  /*一般移动端清除a的点击高亮  透明就表示去掉*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  border: none;
+  outline: none;
+  /*清除移动端默认的表单样式*/
+  -webkit-appearance: none;
+}
+img {
+  /* 解决图片3px的间距 */
+  vertical-align: middle;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 999;
+}
+#header .icon-logo {
+  display: block;
+  height: 45px;
+  width: 80px;
+  padding: 10px 11px;
+  background: url('../images/sprites.png');
+  background-position: 0px -107px;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#header form {
+  flex: 1;
+  padding-top: 7px;
+  position: relative;
+}
+#header form .icon-search {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url('../images/sprites.png');
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: -58px -108px;
+  top: 12px;
+  left: 5px;
+}
+#header form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 17.5px;
+  line-height: 30px;
+  padding-left: 30px;
+  font-size: 12px;
+}
+#header .login {
+  display: block;
+  width: 50px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: #fff;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+  width: 100%;
+}
+#footer ul li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+#footer ul li a img {
+  width: 65px;
+  height: 50px;
+}
+#slide img {
+  width: 100vw;
+}
+#nav {
+  padding: 0.2rem 0;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+#nav ul li {
+  width: 25%;
+  padding-bottom: 0.05rem;
+}
+#nav ul li a {
+  display: inline-block;
+}
+#nav ul li a img {
+  width: 0.4rem;
+  margin-bottom: 0.05rem;
+}
+#nav ul li a p {
+  font-size: 0.14rem;
+}
+#main {
+  background-color: #f5f5f5;
+  padding: 0.1rem;
+}
+#main .seckill {
+  margin-top: 0.1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.01rem 0.01rem #ccc;
+}
+#main .seckill .seckill-title {
+  font-size: 0.14rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  padding: 0rem 0.1rem;
+}
+#main .seckill .seckill-title .seckill-icon {
+  width: 0.2rem;
+  vertical-align: center;
+}
+#main .seckill .seckill-title .seckill-name {
+  color: red;
+  margin: 0 0.1rem;
+}
+#main .seckill .seckill-title .seckill-time {
+  display: inline-block;
+  padding-top: 0.04rem;
+}
+#main .seckill .seckill-title .seckill-time i {
+  display: inline-block;
+  width: 0.15rem;
+  height: 0.15rem;
+  line-height: 0.15rem;
+  background-color: #000;
+  color: #fff;
+}
+#main .seckill .seckill-title .seckill-time i:nth-child(3n) {
+  width: 0.05rem;
+  background-color: #fff;
+  color: #000;
+}
+#main .seckill .seckill-title .seckill-more {
+  float: right;
+}
+#main .seckill .seckill-content {
+  padding: 0.1rem 0;
+}
+#main .seckill .seckill-content ul {
+  width: 100%;
+  display: flex;
+}
+#main .seckill .seckill-content ul li {
+  flex: 1;
+}
+#main .seckill .seckill-content ul li + li {
+  border-left: 0.01rem solid #ccc;
+}
+#main .seckill .seckill-content ul li a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+#main .seckill .seckill-content ul li a .seckill-img {
+  width: 100%;
+}
+#main .seckill .seckill-content ul li a span {
+  display: block;
+  font-size: 0.12rem;
+}
+#main .seckill .seckill-content ul li a span.now-price {
+  color: red;
+}
+#main .seckill .seckill-content ul li a span.pre-price {
+  text-decoration: line-through;
+}
+#main .jd-market {
+  margin-top: 0.1rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.01rem 0.01rem #ccc;
+}
+#main .jd-market .jd-market-title {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  border-bottom: 0.01rem solid #ccc;
+  padding: 0 0.1rem;
+}
+#main .jd-market .jd-market-title h4 {
+  font-weight: normal;
+  position: relative;
+  text-indent: 0.1rem;
+}
+#main .jd-market .jd-market-title h4::before {
+  content: '';
+  width: 0.03rem;
+  height: 0.14rem;
+  background-color: red;
+  position: absolute;
+  top: 0.08rem;
+  left: 0rem;
+}
+#main .jd-market .jd-market-content {
+  width: 100%;
+  display: flex;
+}
+#main .jd-market .jd-market-content .left-products {
+  flex: 1;
+  border-right: 0.01rem solid #ccc;
+}
+#main .jd-market .jd-market-content .left-products a {
+  display: block;
+  width: 100%;
+}
+#main .jd-market .jd-market-content .left-products a img {
+  width: 100%;
+}
+#main .jd-market .jd-market-content .right-products {
+  flex: 1;
+}
+#main .jd-market .jd-market-content .right-products a {
+  display: block;
+  width: 100%;
+}
+#main .jd-market .jd-market-content .right-products a img {
+  width: 100%;
+}
+#main .jd-market .jd-market-content .right-products a:first-of-type {
+  border-bottom: 0.01rem solid #ccc;
+}
